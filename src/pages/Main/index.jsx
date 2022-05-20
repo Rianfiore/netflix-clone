@@ -49,7 +49,7 @@ const Main = () => {
           <RegisterLabel className="RegisterLabel"/>
         </div>
       </header>
-      <main>
+      {/* <main>
         <Section
           sectionClassName="TVSection"
           imgSrc={tvImg}
@@ -111,7 +111,7 @@ const Main = () => {
           <RegisterLabel className="RegisterLabel"/>
         </section>
       </main>
-      <Footer />
+      <Footer /> */}
     </S.Container>
   );
 };
