@@ -12,7 +12,7 @@ const OptionsMenu = ({ type }) => {
       return (
         <S.Primary>
           <Select type="language" options={["ptBR", "enUS"]}/>
-          <button type="button" class="btn btn-danger shadow-none">
+          <button type="button" className="btn btn-danger shadow-none">
             {translate("entryButton")}
           </button>
         </S.Primary>

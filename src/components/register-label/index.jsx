@@ -15,7 +15,7 @@ const RegisterLabel = () => {
           <input
             placeholder={translate("section1.placeholderRegisterButton")}
           ></input>
-          <button type="button" class="btn btn-danger shadow-none">
+          <button type="button" className="btn btn-danger shadow-none">
             <div className="Text">
               <span>{translate("section1.registerButton")}</span>
               <BsChevronRight />

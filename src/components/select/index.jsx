@@ -27,9 +27,9 @@ function LanguageType(options) {
 
   return (
     <S.Container>
-      <div class="dropdown">
+      <div className="dropdown">
           <button
-            class="btn btn-secondary dropdown-toggle shadow-none"
+            className="btn btn-secondary dropdown-toggle shadow-none"
             type="button"
             id="dropdownMenuButton1"
             data-bs-toggle="dropdown"
@@ -38,10 +38,10 @@ function LanguageType(options) {
             <BsGlobe />
             {translate(language)}
           </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             {options.map((e) => (
-              <li onClick={() => handleSelectChange(e)}>
-                <a class="dropdown-item" href="#">{translate(e)}</a>
+              <li key = {e} onClick={() => handleSelectChange(e)}>
+                <a className="dropdown-item" href="#">{translate(e)}</a>
               </li>
             ))}
           </ul>
