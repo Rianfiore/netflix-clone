@@ -21,7 +21,7 @@ export const Container = styled.div`
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: url(${translate("background")}) no-repeat center;
+      //background: url(${translate("background")}) no-repeat center;
       filter: brightness(50%) blur(2px);
       background-size: cover;
     }
