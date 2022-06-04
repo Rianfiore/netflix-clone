@@ -1,4 +1,4 @@
-import background from "./../../img/background-ptbr.jpg";
+import background from "../../img/background-ptbr.jpg";
 
 const messages = {
   ptBR: {
