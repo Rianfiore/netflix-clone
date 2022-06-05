@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
 import * as S from "./styles";
 import { BsGlobe } from "react-icons/bs";
@@ -16,12 +15,10 @@ function LanguageType(options) {
 
   const I18N_STORAGE_KEY = "i18nextLng",
     navigatorLanguage = navigator.language.replace("-", ""),
-    [language] = useState(localStorage.getItem(I18N_STORAGE_KEY)),
+    [language] = useState(localStorage.getItem(I18N_STORAGE_KEY).replace("-","")),
     handleSelectChange = (target) => {
       updateLanguage(target);
     };
-
-    console.log (language, localStorage, navigator.language);
 
   useEffect(() => {
     localStorage.setItem(I18N_STORAGE_KEY, navigatorLanguage);
