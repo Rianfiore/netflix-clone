@@ -21,6 +21,8 @@ function LanguageType(options) {
       updateLanguage(target);
     };
 
+    console.log (language, localStorage, navigator.language);
+
   useEffect(() => {
     localStorage.setItem(I18N_STORAGE_KEY, navigatorLanguage);
   }, [navigatorLanguage]);
