@@ -1,18 +1,25 @@
-import expandIcon from "../../img/expand-icon.svg";
+import * as S from './styles'
+import { Accordion } from 'react-bootstrap';
 
-const AccordionMenu = ({ title, content }) => {
+const AccordionMenu = ({ title, content, id }) => {
   return (
-    <>
-      <div>
+    <S.Container>
+    <Accordion defaultActiveKey={['1']} alwaysOpen>
+  <Accordion.Item eventKey={id}>
+    <Accordion.Header>{title}</Accordion.Header>
+    <Accordion.Body >
+      {content}
+    </Accordion.Body>
+  </Accordion.Item>
+</Accordion>
+      {/* <div className="bar">
         <h2>{title}</h2>
-        <figure>
-          <img src={expandIcon} alt="expand-icon" />
-        </figure>
+          <AiOutlinePlus className="iconPlus"/>
       </div>
-      <div>
+      <div className="content">
         <p>{content}</p>
-      </div>
-    </>
+      </div> */}
+    </S.Container>
   );
 };
 
