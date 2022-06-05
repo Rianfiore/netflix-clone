@@ -17,16 +17,20 @@ const Section = ({
   subtitle,
   reverse,
 }) => {
+  const flexDirection = reverse ? "row" : "row-reverse"
+
   return (
-    <section className={sectionClassName}>
-      <figure>
-        <img src={imgSrc} alt={imgAlt} />
-      </figure>
-      <div className="SectionTextBox">
-        <h2>{title}</h2>
-        <p>{subtitle}</p>
-      </div>
-    </section>
+    <S.Section direction={flexDirection}>
+      <section className={sectionClassName}>
+        <figure>
+          <img src={imgSrc} alt={imgAlt} />
+        </figure>
+        <div className="TextBox">
+          <h2>{title}</h2>
+          <p>{subtitle}</p>
+        </div>
+      </section>
+      </S.Section>
   );
 };
 
@@ -49,7 +53,7 @@ const Main = () => {
           <RegisterLabel className="RegisterLabel"/>
         </div>
       </header>
-      {/* <main>
+      <main>
         <Section
           sectionClassName="TVSection"
           imgSrc={tvImg}
@@ -64,7 +68,7 @@ const Main = () => {
           imgAlt="download-content"
           title={translate("section3.title")}
           subtitle={translate("section3.subtitle")}
-          reverse={false}
+          reverse={true}
         />
         <Section
           sectionClassName="StreamSection"
@@ -80,38 +84,46 @@ const Main = () => {
           imgAlt="kids"
           title={translate("section5.title")}
           subtitle={translate("section5.subtitle")}
-          reverse={false}
+          reverse={true}
         />
-        <section>
-          <h2>{translate("section6.title")}</h2>
+        <section className="FAQ">
+          <h2 className="title">{translate("section6.title")}</h2>
+          <div className="Accordions">
           <AccordionMenu
             title={translate("section6.menu1.title")}
             content={translate("section6.menu1.content")}
+            id={0}
           />
           <AccordionMenu
             title={translate("section6.menu2.title")}
             content={translate("section6.menu2.content")}
+            id={1}
           />
           <AccordionMenu
             title={translate("section6.menu3.title")}
             content={translate("section6.menu3.content")}
+            id={2}
           />
           <AccordionMenu
             title={translate("section6.menu4.title")}
             content={translate("section6.menu4.content")}
+            id={3}
           />
           <AccordionMenu
             title={translate("section6.menu5.title")}
             content={translate("section6.menu5.content")}
+            id={4}
           />
           <AccordionMenu
             title={translate("section6.menu6.title")}
             content={translate("section6.menu6.content")}
+            id={5}
           />
+          </div>
           <RegisterLabel className="RegisterLabel"/>
         </section>
       </main>
-      <Footer /> */}
+      <Footer />
     </S.Container>
   );
 };
