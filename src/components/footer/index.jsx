@@ -10,6 +10,7 @@ const Footer = () => {
 
   return (
     <S.Container>
+      <div>
       <h2>{translate("title")}</h2>
       <nav>
         <ul>
@@ -42,6 +43,7 @@ const Footer = () => {
       </nav>
       <Select type="language" options={["ptBR", "enUS"]}/>
       <p>{translate("info")}</p>
+      </div>
     </S.Container>
   );
 };
